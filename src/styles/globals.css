@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Menlo";
+}
+
+body {
+  background-color: rgb(241 245 249);
+}
+
+.all-pokemon {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1rem));
+  grid-gap: 2.5rem;
+  padding: 0rem 2rem 0rem 2rem;
+  margin: 2rem 7rem;
+}
+
+.all-pokemon .card {
+  background-color: rgb(226 232 240);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.all-pokemon .card:hover {
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  transform: translateY(-5px);
+}
+
+.all-pokemon .card .card-image {
+  background-color: rgb(241 245 249);
+  border-radius: 50%;
+  margin: 15px;
+}
+
+.all-pokemon .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.all-pokemon .card .card-body {
+  padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body h3 {
+  color: #333;
+  text-transform: capitalize;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.search-form .input-control {
+  position: relative;
+  width: 30rem;
+}
+
+.search-form .input-control input {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  outline: none;
+  border-radius: 12px;
+  background-color: #fafafa;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  border: 2px solid #fafafa;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form .input-control input:focus {
+  outline: none;
+  border: 2px solid #6a6969;
+}
+
+.search-form .input-control input::placeholder {
+  color: #333;
+  opacity: 0.5;
+}
+
+.search-form .input-control .submit-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  padding: 0.25rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(96, 96, 96);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.search-form .input-control .submit-btn:hover {
+  padding: 0.3rem 1.2rem;
+}
+
+.search-results {
+  background-color: white;
+  position: absolute;
+  height: 40%;
+  width: 30rem;
+  top: 9%;
+  left: 50%;
+  overflow: auto;
+  transform: translateX(-50%);
+  z-index: 5;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-result-names {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.search-result-names:hover {
+  background-color: #f0f0f0;
+  color: #b10000;
+}
+
+.load-more {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 30px 0px;
+}
+
+.load-more button {
+  padding: 1rem 2rem;
+  border: #333;
+  border-radius: 8px;
+  background-color: rgb(226 232 240);
+  box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.load-more button:hover {
+  color: #333;
+  font-size:larger;
+}
+
+.back-btn {
+  display: flex;
+  justify-content: right;
+  padding-top: 0.5rem;
+}
+
+.back-btn button {
+  padding: 0.7rem 1.2rem;
+  border: #333;
+  border-radius: 8px;
+  background-color: rgb(203 213 225);
+  box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.back-btn  button:hover {
+  color: #333;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
