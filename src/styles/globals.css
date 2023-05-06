@@ -117,6 +117,7 @@ body {
   font-weight: 500;
   color: #fff;
   transition: all 0.3s ease;
+  opacity: 0%;
 }
 
 .search-form .input-control .submit-btn:hover {
