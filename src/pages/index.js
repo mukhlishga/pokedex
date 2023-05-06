@@ -44,9 +44,9 @@ export default function Home() {
             placeholder='Search for a pokemon...'
           >
           </input>
-          <button className='submit-btn' type='submit'>
+          {/* <button className='submit-btn' type='submit'>
             Search
-          </button>
+          </button> */}
         </div>
       </form>
 
@@ -67,7 +67,7 @@ export default function Home() {
                 />
               </div>
               <div className='card-body'>
-                <span>{`#${('000' + pokemon.id).slice(-3)}`}</span>
+                <span>{`#${pokemon.id}`}</span>
                 <h3>{pokemon.name}</h3>
               </div>
             </div>

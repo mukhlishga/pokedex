@@ -66,7 +66,7 @@ function Pokemon() {
       : (
         pokemonItem && <div className={styles.PokemonCard}>
   
-          <h2 class={styles.PokemonName}>{`#${('000' + pokemonItem?.id).slice(-3)} ${pokemonItem?.name}`}</h2>
+          <h2 class={styles.PokemonName}>{`#${pokemonItem?.id} - ${pokemonItem?.name}`}</h2>
 
           <div className={styles.PokemonImage}>
             <img class={styles.PokemonImageFront}
