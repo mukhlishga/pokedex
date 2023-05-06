@@ -78,7 +78,7 @@ export default function Home() {
       <div className='load-more'>
         {allPokemonData.length > 0 &&
           <button className='load-mode-btn' onClick={next}>
-            Load more &darr;
+            {!loading ? "Load more" : "Loading . . ."}
           </button>
         }
       </div>

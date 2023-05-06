@@ -58,7 +58,6 @@ export const GlobalProvider = ({ children }) => {
     dispatch({ type: "LOADING" });
     const res = await fetch(`${baseUrl}pokemon?limit=20`);
     const data = await res.json();
-    dispatch({ type: "GET_ALL_POKEMON", payload: data });
 
     const allPokemonData = [];
     for (const pokemon of data.results) {
@@ -67,6 +66,7 @@ export const GlobalProvider = ({ children }) => {
       allPokemonData.push(pokemonData);
     }
     setAllPokemonData(allPokemonData);
+    dispatch({ type: "GET_ALL_POKEMON", payload: data });
   }
 
   const getPokemon = async (name) => {
@@ -87,7 +87,6 @@ export const GlobalProvider = ({ children }) => {
     dispatch({ type: "LOADING" });
     const res = await fetch(state.next);
     const data = await res.json();
-    dispatch({ type: "NEXT", payload: data });
 
     const newAllPokemonData = [];
     for (const pokemon of data.results) {
@@ -96,6 +95,7 @@ export const GlobalProvider = ({ children }) => {
       newAllPokemonData.push(pokemonData);
     }
     setAllPokemonData([...allPokemonData, ...newAllPokemonData]);
+    dispatch({ type: "NEXT", payload: data });
   }
 
   const realTimeSearch = debounce(async (search) => {
