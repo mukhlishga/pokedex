@@ -111,8 +111,6 @@ export const GlobalProvider = ({ children }) => {
     getPokomenDatabase();
   }, [])
 
-  // console.log(state)
-
   return (
     <GlobalContext.Provider 
       value={{ 

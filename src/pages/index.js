@@ -41,7 +41,7 @@ export default function Home() {
             type='text'
             value={search}
             onChange={handleChange}
-            placeholder='Type the pokemon name here...'
+            placeholder='Search for a pokemon...'
           >
           </input>
           <button className='submit-btn' type='submit'>

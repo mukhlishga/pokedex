@@ -75,6 +75,14 @@ body {
 .search-form .input-control {
   position: relative;
   width: 25rem;
+  border: 2px solid #6a6969;
+  border-radius: 12px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form .input-control:hover {
+  border: 2px solid #ffffff;
+  transition: all 0.5s ease;
 }
 
 .search-form .input-control input {
@@ -94,7 +102,7 @@ body {
 
 .search-form .input-control input:focus {
   outline: none;
-  border: 2px solid #6a6969;
+  border: 2px solid #fafafa;
 }
 
 .search-form .input-control input::placeholder {
