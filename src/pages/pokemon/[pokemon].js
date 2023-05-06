@@ -66,26 +66,23 @@ function Pokemon() {
       : (
         pokemonItem && <div className={styles.PokemonCard}>
   
-        <h2 class={styles.PokemonName}>{`#${('000' + pokemonItem?.id).slice(-3)} ${pokemonItem?.name}`}</h2>
+          <h2 class={styles.PokemonName}>{`#${('000' + pokemonItem?.id).slice(-3)} ${pokemonItem?.name}`}</h2>
+
           <div className={styles.PokemonImage}>
-            <img 
+            <img class={styles.PokemonImageFront}
               src={
                 pokemonItem?.sprites?.front_default
                 ? pokemonItem?.sprites?.front_default
                 : pokemonItem?.sprites?.other?.home.front_default
               }
-              height={400}
-              width={400}
               alt={pokemonItem?.name}
             />
-            <img 
+            <img class={styles.PokemonImageBack}
               src={
                 pokemonItem?.sprites?.back_default
                 ? pokemonItem?.sprites?.back_default
                 : pokemonItem?.sprites?.other?.home.back_default
               } 
-              height={200}
-              width={200}
               alt={pokemonItem?.name}
             />
           </div>
